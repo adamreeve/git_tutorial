@@ -160,6 +160,21 @@ To see all branches including those on remote repositories, you can use::
   git branch --all
 
 
+Staging Parts of Files
+----------------------
+
+Most Git graphical interfaces allow you to stage only some changes in
+a file. From the Git command line you can do this with the "--patch" or
+"-p" option to the add command. Change a line at the top of this file
+and then make another change further down. Now run::
+
+  git add -p index.rst
+
+Say yes to adding the first change but no to the second change,
+then run :command:`git status`, :command:`git diff`, and
+then :command:`git diff --cached`.
+
+
 Rewriting History
 -----------------
 
