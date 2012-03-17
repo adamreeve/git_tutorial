@@ -124,7 +124,16 @@ directory will be updated::
 
   git checkout new_feature
 
+You can create a new branch and check it out in one go by using the "-b" option
+to the checkout command::
+
+  git checkout -b my_feature
+
 Now make some changes and commit them on your new branch.
+You can see a list of branches and the branch you're on at
+any time by running::
+
+  git branch
 
 
 Resolving Conflicts
@@ -145,6 +154,10 @@ other commands by prefixing them with the remote name. For example, to
 show the head commit of the master branch on the origin repository::
 
   git show origin/master
+
+To see all branches including those on remote repositories, you can use::
+
+  git branch --all
 
 
 Rewriting History
