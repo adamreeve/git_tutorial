@@ -43,6 +43,18 @@ change into that directory now::
 
   cd git_tutorial
 
+Have a look at the project history on the master branch with::
+
+  git log
+
+Also try out some of the options to the log command::
+
+  git log --patch
+  git log --stat
+  git log --oneline --graph --all
+
+The last example uses the "--all" option to show history in all branches.
+
 
 Making and Committing Changes
 -----------------------------
