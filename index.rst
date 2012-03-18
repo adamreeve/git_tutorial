@@ -109,8 +109,8 @@ hash will change. This is useful if you realise you've made a small mistake
 in the previous commit and haven't yet pushed it to a public repository.
 
 
-Branches and Merging
---------------------
+Branches
+--------
 
 It's always a good idea to create a new branch for any new feature you're working
 on in a project::
@@ -146,8 +146,50 @@ any time by running::
   git branch
 
 
-Resolving Conflicts
--------------------
+Merging and Resolving Conflicts
+-------------------------------
+
+Now we will practice merging one branch into another branch. We will create
+a new local branch that matches the "merge_into" branch from the origin
+repository, and merge in the "merge_from" branch. First create the local branch
+you will work on::
+
+  git checkout -b merge_into origin/merge_into
+
+Now run::
+
+  gitk --all
+
+This will show a tree with commits from all branches. Note where the heads
+of the merge_from, origin/merge_from and origin/merge_into branches are.
+
+Now merge the origin/merge_from branch::
+
+  git merge origin/merge_from
+
+And look at the result of your merge::
+
+  gitk --all
+
+Now we will try another merge, but this time there will be a conflict::
+
+  git checkout -b merge_conflict origin/merge_conflict
+  gitk --all
+  git merge origin/conflicting
+
+Read the output of the merge command to note that there is a conflict in
+the :file:`index.rst` file. Also run :command:`git status`. When you have
+conflicts in multiple files you can keep track of which conflicts have
+been resolved with the status command.
+Open that file in your editor and resolve the
+conflict.
+Then mark the conflict as resolved by adding the file::
+
+  git add index.rst
+
+And now you have to manually make a merge commit::
+
+  git commit -m "Merge conflicting branch"
 
 
 Remotes and Remote Branches
