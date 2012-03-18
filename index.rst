@@ -239,6 +239,36 @@ then run :command:`git status`, :command:`git diff`, and
 then :command:`git diff --cached`.
 
 
+Stashing Changes
+----------------
+
+Make a change to a file then run :command:`git status`. Now stash
+that change::
+
+  git stash
+
+And look at what this has done::
+
+  git status
+  git stash list
+  git show stash@{0}
+
+Now pop your stashed change off the top of the stash list::
+
+  git stash pop
+  git status
+  git stash list
+
+And stash your change again to get a clean working directory::
+
+  git stash
+
+Note that you can use :command:`git stash apply` to apply a stashed
+change without removing it from the stash list, and that you can
+also apply a stashed change on a different branch to the one it was
+made on.
+
+
 Rewriting History
 -----------------
 
