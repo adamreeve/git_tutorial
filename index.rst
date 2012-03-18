@@ -98,6 +98,16 @@ it to something else, for example::
 
   git config --global core.editor "nano"
 
+Now make another change to the file and then add this change to the staging
+area, then run::
+
+  git commit --amend
+
+The amend option lets you update the previous commit. It will also open the
+editor to let you update the commit message if required. Note that the commit
+hash will change. This is useful if you realise you've made a small mistake
+in the previous commit and haven't yet pushed it to a public repository.
+
 
 Branches and Merging
 --------------------
