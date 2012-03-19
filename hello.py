@@ -5,7 +5,7 @@ Script that says hello
 
 
 def do_stuff(name="World"):
-    print "Hello %s!" % name
+    print "HELLOW %s!!!" % name.upper()
 
 
 if __name__ == '__main__':
