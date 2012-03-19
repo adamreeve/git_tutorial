@@ -267,6 +267,7 @@ Now pop your stashed change off the top of the stash list::
 
   git stash pop
   git status
+  git diff
   git stash list
 
 And stash your change again to get a clean working directory::
