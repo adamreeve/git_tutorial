@@ -283,16 +283,23 @@ Git has powerful tools for allowing you to rearrange history so that you
 can clean up work to make the history more clear. The most useful
 one to know is :command:`git rebase --interactive`. Rebasing means
 to move a series of commits onto a new base commit. You can also
-use the rebase command and keep the base the same, but edit a series
-of commits.
+use the rebase command and keep the base the same, but still edit
+and rearrange commits.
 
-Make one change to this file then commit it, then make a second change.
-Now use the rebase command with the interactive option to squash the
-second commit into the first.
+Checkout a new branch that points to the same commit as origin/rebase_me::
 
-Note that if you simply want to modify the previous commit, it's easiest
-to run :command:`git commit --amend` after you've staged the changes
-you want to ammend to the previous commit.
+  git checkout -b rebasing origin/rebase_me
+
+We will rebase these commits onto the latest master branch. First have
+a look at what we will rebasing by running :command:`gitk --all` and look
+at the origin/rebase_me branch.
+
+Now start the interactive rebase::
+
+  git rebase --interactive master
+
+Reorder the commits so that the last commit becomes first and the
+"typo fix" commit is squashed into the first commit.
 
 Note that you can still access any rebased commits with by their hash,
 and you can find the commits that you have recently checked out with the
