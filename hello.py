@@ -5,7 +5,7 @@ Script that says hello
 
 
 def do_stuff(name="World"):
-    print "Hello %s!" % name
+    print "Howdy %s!" % name
 
 
 if __name__ == '__main__':
