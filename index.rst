@@ -296,7 +296,7 @@ Checkout a new branch that points to the same commit as origin/rebase_me::
 
 We will rebase these commits onto the latest master branch. First have
 a look at what we will rebasing by running :command:`gitk --all` and looking
-at the origin/rebase_me branch, or :command:`git log master..rebasing`.
+at the origin/rebase_me branch, or :command:`git log -p master..rebasing`.
 
 Now start the interactive rebase::
 
@@ -304,6 +304,13 @@ Now start the interactive rebase::
 
 Reorder the commits so that the "Update docstring" commit is first and the
 "Fix typo" commit is squashed into the "More excitement" commit.
+
+Because you have squashed a commit, you will get the opportunity to change
+the message of the commit that was squashed into.
+Think about whether you should update the original
+commit message to account for the change that was squashed.
+
+Run :command:`gitk` to see what you've done.
 
 Note that you can still access any rebased commits with by their hash,
 and you can find the commits that you have recently checked out with the
