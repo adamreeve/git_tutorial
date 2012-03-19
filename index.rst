@@ -86,8 +86,9 @@ added to the staging area, you'll need to unstage that file by running::
 
   git reset HEAD hello.py
 
-Note that git tells you how to stage and unstage changes in the output of
-the :command:`git status` command.
+.. note::
+  git tells you how to stage and unstage changes in the output of
+  the :command:`git status` command.
 
 If you then decide that your change is rubbish and you don't want to remove
 it completely, you can checkout a clean version of the changed file::
@@ -97,7 +98,7 @@ it completely, you can checkout a clean version of the changed file::
 The "--" before the file path isn't required but is recommended as it means that
 any further command options are file paths, which prevents confusion when you
 have a file named the same as a branch (as :command:`git checkout` is also used
-for checking out a branch).
+for checking out a branch, as you'll see later).
 
 Now make another change and add it to the staging area, then commit it::
 
@@ -116,9 +117,13 @@ area, then run::
   git commit --amend
 
 The amend option lets you update the previous commit. It will also open the
-editor to let you update the commit message if required. Note that the commit
-hash will change. This is useful if you realise you've made a small mistake
+editor to let you update the commit message if required.
+This is useful if you realise you've made a small mistake
 in the previous commit and haven't yet pushed it to a public repository.
+
+.. note::
+  The commit hash changes after you amend it. This is now
+  a different commit to the one before, so the hash has changed.
 
 
 Branches
@@ -242,8 +247,10 @@ then :command:`git diff --cached`.
 Stashing Changes
 ----------------
 
-Make a change to a file then run :command:`git status`. Now stash
-that change::
+Run :command:`git status`. You should have a change added to the
+staging area and another unstaged change from the last section.
+Otherwise make a change to :file:`hello.py`.
+Now stash those changes::
 
   git stash
 
