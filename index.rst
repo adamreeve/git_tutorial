@@ -62,14 +62,14 @@ Making and Committing Changes
 Run :command:`git status` and you should get a message that there are
 no changes to be staged and no staged changes to be committed.
 
-Now make a change to the :file:`index.rst` file and run :command:`git status`
+Now make a change to the :file:`hello.py` file and run :command:`git status`
 again. You should see that you still have no changes staged to commit
 but you have an unstaged change.
 
 Run :command:`git diff` go see what changes you have made. Now add your
 change to the staging area::
 
-  git add index.rst
+  git add hello.py
 
 And run :command:`git status` again. You will see that there are no unstaged
 changes but one file has changes that are staged.
@@ -84,7 +84,7 @@ run::
 If you've decided that you no longer want to commit a change that you've
 added to the staging area, you'll need to unstage that file by running::
 
-  git reset HEAD index.rst
+  git reset HEAD hello.py
 
 Note that git tells you how to stage and unstage changes in the output of
 the :command:`git status` command.
@@ -92,7 +92,7 @@ the :command:`git status` command.
 If you then decide that your change is rubbish and you don't want to remove
 it completely, you can checkout a clean version of the changed file::
 
-  git checkout -- index.rst
+  git checkout -- hello.py
 
 The "--" before the file path isn't required but is recommended as it means that
 any further command options are file paths, which prevents confusion when you
@@ -190,14 +190,14 @@ Now we will try another merge, but this time there will be a conflict::
   git merge origin/conflicting
 
 Read the output of the merge command to note that there is a conflict in
-the :file:`index.rst` file. Also run :command:`git status`. When you have
+the :file:`hello.py` file. Also run :command:`git status`. When you have
 conflicts in multiple files you can keep track of which conflicts have
 been resolved with the status command.
 Open that file in your editor and resolve the
 conflict.
 Then mark the conflict as resolved by adding the file::
 
-  git add index.rst
+  git add hello.py
 
 And now you have to manually make a merge commit::
 
@@ -229,10 +229,10 @@ Staging Parts of Files
 
 Most Git graphical interfaces allow you to stage only some changes in
 a file. From the Git command line you can do this with the "--patch" or
-"-p" option to the add command. Change a line at the top of this file
-and then make another change further down. Now run::
+"-p" option to the add command. Change a line at the top of :file:`hello.py`
+and then make another change at the bottom. Now run::
 
-  git add -p index.rst
+  git add -p hello.py
 
 Say yes to adding the first change but no to the second change,
 then run :command:`git status`, :command:`git diff`, and
