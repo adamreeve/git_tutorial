@@ -291,15 +291,15 @@ Checkout a new branch that points to the same commit as origin/rebase_me::
   git checkout -b rebasing origin/rebase_me
 
 We will rebase these commits onto the latest master branch. First have
-a look at what we will rebasing by running :command:`gitk --all` and look
-at the origin/rebase_me branch.
+a look at what we will rebasing by running :command:`gitk --all` and looking
+at the origin/rebase_me branch, or :command:`git log master..rebasing`.
 
 Now start the interactive rebase::
 
   git rebase --interactive master
 
-Reorder the commits so that the last commit becomes first and the
-"typo fix" commit is squashed into the first commit.
+Reorder the commits so that the "Update docstring" commit is first and the
+"Fix typo" commit is squashed into the "More excitement" commit.
 
 Note that you can still access any rebased commits with by their hash,
 and you can find the commits that you have recently checked out with the
