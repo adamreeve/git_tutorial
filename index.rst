@@ -162,6 +162,9 @@ any time by running::
 
   git branch
 
+Have a look at the history of your branch and the position of other branches
+by running :command:`gitk`.
+
 
 Merging and Resolving Conflicts
 -------------------------------
