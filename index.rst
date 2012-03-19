@@ -307,5 +307,26 @@ and you can find the commits that you have recently checked out with the
 something it's very hard to permanently lose that work.
 
 
+More on Remotes
+---------------
+
+Create an account on GitHub if you don't have one already, then
+fork this repository. Now make some changes to this repository (if you
+can, make the tutorial better!) and push them to a branch
+on your remote repository.
+To push you'll first have to create an alias for your remote repository::
+
+  git remote add github https://<your_username>@github.com/<your_username>/git_tutorial.git
+
+Where "<your_username>" has been replaced with your GitHub username. Now to push
+your changes to your remote repository::
+
+  git push github <name_of_branch>
+
+Now on the web page for your fork of the git_tutorial repository, click
+on the pull request button and follow the steps to create a new pull
+request.
+
+
 * :ref:`genindex`
 * :ref:`search`
