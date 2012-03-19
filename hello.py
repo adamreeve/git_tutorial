@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 """
 Script that says hello
+
+For practicing with git
 """
 
 
