@@ -125,6 +125,13 @@ in the previous commit and haven't yet pushed it to a public repository.
   The commit hash changes after you amend it. This is now
   a different commit to the one before, so the hash has changed.
 
+Now we'll try using git's graphical interface for making a commit. Make
+a change to :file:`hello.py` then run::
+
+  git gui
+
+Stage the change you made then make another commit.
+
 
 Branches
 --------
