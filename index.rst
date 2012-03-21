@@ -236,7 +236,7 @@ show the head commit of the master branch on the origin repository::
 
 To see all branches including those on remote repositories, you can use::
 
-  git branch --all
+  git branch -a
 
 
 Staging Parts of Files
