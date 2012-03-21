@@ -145,8 +145,10 @@ on in a project::
 
   git branch new_feature
 
-This will create a new branch that points to your current head commit. You can
-specify which commit the new branch should point to::
+This will create a new branch that points to the commit you have currently
+checked out. You can also specify which commit the new branch should point to.
+For example, to create a new branch that points to the same commit as the master
+branch::
 
   git branch another_feature master
 
@@ -261,6 +263,12 @@ then :command:`git diff --cached`.
 Stashing Changes
 ----------------
 
+Git's stash command is useful for storing changes you have made
+that you want to save but don't want to commit yet. For example,
+you can stash changes and then switch to another branch and do
+some work, making commits, then go to another branch and recover
+your stashed changes.
+
 Run :command:`git status`. You should have a change added to the
 staging area and another unstaged change from the last section.
 Otherwise make a change to :file:`hello.py`.
@@ -274,6 +282,9 @@ And look at what this has done::
   git stash list
   git stash show -p stash@{0}
 
+Your working directory and index should now be clean, but
+your change is safely stored away in the list of stashes.
+
 Now pop your stashed change off the top of the stash list::
 
   git stash pop
@@ -281,7 +292,10 @@ Now pop your stashed change off the top of the stash list::
   git diff
   git stash list
 
-And stash your change again to get a clean working directory::
+Your changes are now back in your working directory, and have
+been removed from the stash list.
+
+Stash your change again to get a clean working directory::
 
   git stash
 
