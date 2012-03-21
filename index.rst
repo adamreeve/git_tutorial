@@ -107,9 +107,13 @@ Now make another change and add it to the staging area, then commit it::
 You can either specify a commit message on the command line with the "-m"
 option or if you leave that option off, git will open a text editor to allow
 you to enter a message. By default this is vim, but you might want to change
-it to something else, for example::
+it to something else. For example, if you're on Linux::
 
-  git config --global core.editor "nano"
+  git config --global core.editor "gedit"
+
+Or if you're on Windows and have TortoiseGit installed, you can use::
+
+  git config --global core.editor "notepad2"
 
 Now make another change to the file and then add this change to the staging
 area, then run::
