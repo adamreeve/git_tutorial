@@ -303,7 +303,7 @@ Checkout a new branch that points to the same commit as origin/rebase_me::
 
 We will rebase these commits onto the latest master branch. First have
 a look at what we will rebasing by running :command:`gitk --all` and looking
-at the origin/rebase_me branch, or :command:`git log -p master..rebasing`.
+at the origin/rebase_me branch, or :command:`git log -p origin/master..rebasing`.
 
 Now start the interactive rebase::
 
