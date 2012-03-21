@@ -307,7 +307,7 @@ at the origin/rebase_me branch, or :command:`git log -p master..rebasing`.
 
 Now start the interactive rebase::
 
-  git rebase --interactive master
+  git rebase --interactive origin/master
 
 Reorder the commits so that the "Update docstring" commit is first and the
 "Fix typo" commit is squashed into the "More excitement" commit.
