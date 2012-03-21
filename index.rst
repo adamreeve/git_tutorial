@@ -268,7 +268,7 @@ And look at what this has done::
 
   git status
   git stash list
-  git show stash@{0}
+  git stash show -p stash@{0}
 
 Now pop your stashed change off the top of the stash list::
 
