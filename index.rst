@@ -90,7 +90,7 @@ added to the staging area, you'll need to unstage that file by running::
   git tells you how to stage and unstage changes in the output of
   the :command:`git status` command.
 
-If you then decide that your change is rubbish and you don't want to remove
+If you then decide that your change is rubbish and you want to remove
 it completely, you can checkout a clean version of the changed file::
 
   git checkout -- hello.py
