@@ -337,7 +337,7 @@ commit message to account for the change that was squashed.
 
 Run :command:`gitk` to see what you've done.
 
-Note that you can still access any rebased commits with by their hash,
+Note that you can still access any rebased commits by their hash,
 and you can find the commits that you have recently checked out with the
 :command:`git reflog` command. This means that if you have committed
 something it's very hard to permanently lose that work.
