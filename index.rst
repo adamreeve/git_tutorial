@@ -26,6 +26,12 @@ commits you make::
 If you are using a graphical Git client
 there will be an option to edit these settings.
 
+Note that you can get help on any git command by using
+the help command. For example, to see the help for the
+config command, run::
+
+  git help config
+
 
 Creating a Repository
 ---------------------
