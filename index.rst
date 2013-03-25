@@ -171,7 +171,8 @@ To delete a branch::
 
   git branch -d another_feature
 
-This will give an error if the branch hasn't been merged into another branch.
+This will give an error if the branch hasn't been merged into another branch
+to save you from accidentally losing changes.
 
 Now checkout the branch you created. If there are any differences between
 your previous head commit and the branch you are checking out, your working
@@ -179,7 +180,7 @@ directory will be updated::
 
   git checkout new_feature
 
-You can create a new branch and check it out in one go by using the "-b" option
+You can create a new branch and check it out in one step by using the "-b" option
 to the checkout command::
 
   git checkout -b my_feature
@@ -231,7 +232,7 @@ conflicts in multiple files you can keep track of which conflicts have
 been resolved with the status command.
 Open that file in your editor and resolve the
 conflict.
-Then mark the conflict as resolved by adding the file::
+Then mark the conflict as resolved by adding the file to the staging area::
 
   git add hello.py
 
@@ -271,7 +272,8 @@ and then make another change at the bottom. Now run::
   git add -p hello.py
 
 Say yes to adding the first change but no to the second change,
-then run :command:`git status`, :command:`git diff`, and
+then to see the effect of this,
+run :command:`git status`, :command:`git diff`, and
 then :command:`git diff --cached`.
 
 
@@ -303,6 +305,9 @@ your change is safely stored away in the list of stashes.
 Now pop your stashed change off the top of the stash list::
 
   git stash pop
+
+And have a look at what this has done::
+
   git status
   git diff
   git stash list
@@ -377,6 +382,7 @@ your changes to your remote repository::
 Now on the web page for your fork of the git_tutorial repository, click
 on the pull request button and follow the steps to create a new pull
 request.
+If your change is useful then I will merge it and the tutorial will be updated.
 
 
 * :ref:`genindex`
