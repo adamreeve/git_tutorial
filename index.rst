@@ -4,18 +4,27 @@ ABI Summer Tutorial: Version Control With Git
 Getting Started
 ---------------
 
-If Git isn't installed already, it can be installed from the git-core
-package if you're using Linux or by downloading msysGit for Windows.
+Git installers for various platforms are available from `git-scm.com`__
+or Git can be installed using a package manager on Linux.
 
-The first thing that must be done before using Git is to tell it
+__ http://git-scm.com/downloads
+
+You may wish to install a graphical client for Git,
+there are many available but two good options are
+`SourceTree`_ for Windows and Mac or gitg for Linux.
+
+.. _SourceTree: http://www.sourcetreeapp.com/
+
+After installing Git,
+the first thing that must be done is to tell Git
 your name and email address. These will be associated with any
 commits you make::
 
   git config --global user.name "Adam Reeve"
   git config --global user.email "aree035@aucklanduni.ac.nz"
 
-If you are using a graphical Git client such as Tortoise Git on Windows
-or gitg on Linux there will be an option to edit these settings.
+If you are using a graphical Git client
+there will be an option to edit these settings.
 
 
 Creating a Repository
