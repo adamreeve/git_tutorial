@@ -256,9 +256,29 @@ show the head commit of the master branch on the origin repository::
 
   git show origin/master
 
+Or to see a log of commits on origin's master branch::
+
+  git log origin/master
+
 To see all branches including those on remote repositories, you can use::
 
   git branch -a
+
+In order to get the latest changes from a remote repository you use the
+fetch command::
+
+  git fetch origin
+
+Git also has a pull command that can be useful. This will fetch changes
+from a repository and then merge a specified branch. For example, if you
+were on your master branch and want to merge changes from origin's master
+branch, you could use::
+
+  git pull origin master
+
+Often it is best to use fetch rather than pull so that you can first use
+:command:`git log` to see what changes you will be merging
+before running the merge.
 
 
 Staging Parts of Files
