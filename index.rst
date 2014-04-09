@@ -234,8 +234,11 @@ Read the output of the merge command to note that there is a conflict in
 the :file:`hello.py` file. Also run :command:`git status`. When you have
 conflicts in multiple files you can keep track of which conflicts have
 been resolved with the status command.
-Open that file in your editor and resolve the
-conflict.
+Open :file:`hello.py` in your editor and you will see conflict markers
+around the lines that have been changed on both the conflicting and
+merge_conflict branches.
+Edit the file to combine the two conflicting changes and remove
+the conflict markers.
 Then mark the conflict as resolved by adding the file to the staging area::
 
   git add hello.py
