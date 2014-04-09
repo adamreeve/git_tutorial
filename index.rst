@@ -130,6 +130,10 @@ Or if you're on Windows and have TortoiseGit installed, you can use::
 
   git config --global core.editor "notepad2"
 
+Or to use notepad++, see this `stack overflow answer`_.
+
+.. _stack overflow answer: http://stackoverflow.com/a/2486342
+
 Now make another change to the file and then add this change to the staging
 area, then run::
 
